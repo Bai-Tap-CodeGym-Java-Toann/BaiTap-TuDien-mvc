@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My dictionary</title>
+    <style>
+        div {
+            margin: auto;
+            text-align: center;
+            padding-top: 30px;
+            width: 35%;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <form method="post">
+        <label for="en">siêu từ điển</label>
+        <input id="en" name="en" placeholder="nhập từ cần dịch">
+        <input type="submit" value="dịch">
+    </form>
+    <br>
+    <h3 style="text-align: center">
+        Nghĩa tiếng việt:
+        <!--/*@thymesVar id="finded" type="java.lang.String"*/-->
+        <th:block th:text="${finded}">
+        </th:block>
+    </h3>
+</div>
+</body>
+</html>
